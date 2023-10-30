@@ -1,11 +1,6 @@
 import { Light } from "./Light";
 
-export function SmartHome(props) {
-  const {
-    onFirstToggle,
-    onSecondToggle,
-    onThirdToggle,
-  } = props;
+export function SmartHome() {
 
   return (
     <section
@@ -18,9 +13,9 @@ export function SmartHome(props) {
         paddingTop: "1rem",
       }}
     >
-      <Light id={0} onToggle={onFirstToggle} />
-      <Light id={1} onToggle={onSecondToggle} />
-      <Light id={2} onToggle={onThirdToggle} />
+      <Light id={0} />
+      <Light id={1} />
+      <Light id={2} />
     </section>
   );
 }
