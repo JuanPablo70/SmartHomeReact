@@ -1,5 +1,11 @@
+import { useContext } from "react";
+import { SmartHomeContext } from "../SmartHomeContext";
+
 export function Light(props) {
-  const { id, isOn, onToggle } = props;
+  const { id, onToggle } = props;
+  const { lights } = useContext(SmartHomeContext);
+
+  const isOn = lights[id];
 
   return (
     <button
